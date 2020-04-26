@@ -1640,7 +1640,37 @@ button.icon-unsorted {
     display: flex;
     justify-content: space-between;
     padding: 30px 0px;
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        font-size: 13px;
+        color: $green;
+        top: -3px;
+        right: 13px;
+        &::before {
+            font-family: "icomoon";
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+    .jq-selectbox__select {
+        height: 25px;
+        padding: 0 25px 0 10px;
+        border: 1px solid #d5d5d5;
+        border-bottom-color: #d5d5d5;
+        border-radius: 0px;
+        background: #fff;
+        box-shadow: none;
+        font: "Roboto", sans-serif;
+    }
+    .jq-selectbox__select-text {
+        font-size: 13px;
+        color: #70838d;
+        line-height: 25px;
+    }
 }
+
 .price__product {
     font-size: 22px;
     color: $red;
@@ -2033,14 +2063,41 @@ button.icon-unsorted {
         color: #000;
         padding: 0px 10px;
     }
-    select {
+    .jq-selectbox {
         max-width: 540px;
         width: 100%;
-        background-color: #f9f9f9;
+    }
+    .jq-selectbox__select {
         height: 40px;
+        padding: 0 45px 0 10px;
         border: 1px solid #dedede;
+        border-bottom-color: #none;
+        font-size: 14px;
+        line-height: 40px;
+        border-radius: 0px;
+        background-color: #f9f9f9;
+        box-shadow: none;
+        font: "Roboto", sans-serif;
+        text-shadow: none;
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }   
+    .jq-selectbox__select-text{
+        font-size: 14px;
         color: #707070;
-        padding: 0px 10px;
+    }
+    .jq-selectbox__trigger-arrow {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        border: none;
+        font-size: 15px;
+        color: #444;
+        &::before {
+            font-family: "icomoon";
+            content: "\f0d7";
+        }
     }
 }
 // end settings
@@ -2216,10 +2273,10 @@ button.icon-unsorted {
             font-weight: 500;
             color: #707070;
             position: relative;
-            &.active::before{
+            &.active::before {
                 color: $green;
             }
-            &::before {                
+            &::before {
                 font-family: "icomoon";
                 position: absolute;
                 left: 25px;
@@ -2230,9 +2287,147 @@ button.icon-unsorted {
         }
     }
 }
-//
-
-
 // end profile
+
+// start upload
+.upload__inner {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 110px;
+    button {
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        margin-left: 175px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        &:hover {
+            background-color: #509447;
+        }
+    }
+}
+.upload__inner-title {
+    font-size: 24px;
+    @include f500;
+    color: $bg;
+    padding: 16px 35px 18px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 40px;
+}
+.upload__inner-content {
+    margin-bottom: 30px;
+    padding: 0px 50px 0px 45px;
+}
+.upload__line {
+    margin-bottom: 25px;
+    display: flex;
+
+    label {
+        min-width: 175px;
+        padding-right: 15px;
+        color: #444;
+        padding-top: 5px;
+        span {
+            color: $green;
+            font-size: 24px;
+        }
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    select,
+    input,
+    textarea {
+        color: #707070;
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+    }
+    .jq-file__browse {
+        color: #444;
+        font-size: 12px;
+        line-height: 26px;
+        position: absolute;
+        top: 5px;
+        right: auto;
+        left: 9px;
+        padding: 0px 12px;
+        border: 1px solid #d7d7d7;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+    }
+    input[type="file"] {
+        outline: none;
+    }
+    textarea {
+        resize: none;
+        height: 150px;
+        padding: 8px 18px;
+    }
+    .jq-file {
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+    }
+    .jq-file__name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0 18px;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0px;
+        background: transparent;
+        box-shadow: none;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        margin-left: 100px;
+    }
+    .jq-selectbox {
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font: "Roboto", sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+        font-size: 15px;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        &::before {
+            font-family: "icomoon";
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+    .jq-selectbox__dropdown {
+        top: 37px;
+    }
+}
+// end upload
 
 @import "media";
