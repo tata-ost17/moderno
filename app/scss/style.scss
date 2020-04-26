@@ -2071,19 +2071,19 @@ button.icon-unsorted {
         height: 40px;
         padding: 0 45px 0 10px;
         border: 1px solid #dedede;
-        border-bottom-color: #none;
+        border-bottom-color: #dedede;
         font-size: 14px;
         line-height: 40px;
         border-radius: 0px;
-        background-color: #f9f9f9;
+        background: #f9f9f9;
         box-shadow: none;
         font: "Roboto", sans-serif;
         text-shadow: none;
     }
     .jq-selectbox__trigger {
         border-left: none;
-    }   
-    .jq-selectbox__select-text{
+    }
+    .jq-selectbox__select-text {
         font-size: 14px;
         color: #707070;
     }
@@ -2216,8 +2216,6 @@ button.icon-unsorted {
         color: #000;
     }
 }
-.profile-settings {
-}
 
 .personal-box {
     background-color: #fff;
@@ -2332,9 +2330,6 @@ button.icon-unsorted {
             color: $green;
             font-size: 24px;
         }
-        &::placeholder {
-            color: #707070;
-        }
     }
     select,
     input,
@@ -2346,6 +2341,9 @@ button.icon-unsorted {
         height: 40px;
         background-color: #f9f9f9;
         padding: 0px 18px;
+        &::placeholder {
+            color: #707070;
+        }
     }
     .jq-file__browse {
         color: #444;
@@ -2429,5 +2427,137 @@ button.icon-unsorted {
     }
 }
 // end upload
+// start withdrawals
+.withdrawals__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.withdrawals__col {
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+}
+.withdrawals__title {
+    padding: 18px 32px 24px;
+    font-size: 24px;
+    @include f500;
+    border-bottom: 1px solid #dedede;
+    color: $bg;
+    margin-bottom: 30px;
+}
+.withdrawals__content {
+    padding: 0px 40px 0px 35px;
+    button {
+        margin-bottom: 50px;
+        background-color: $green;
+        color: #fff;
+        padding: 15px 36px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        &:hover {
+            background-color: #509447;
+        }
+    }
+}
+.withdrawals__form-line {
+    margin-bottom: 25px;
+    label {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f500;
+        margin-bottom: 15px;
+        color: $bg;
+        span {
+            color: $green;
+        }
+    }
+    input,
+    select {
+        color: #707070;
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    .jq-selectbox {
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font: "Roboto", sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+        font-size: 15px;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        &::before {
+            font-family: "icomoon";
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+    .jq-selectbox__dropdown {
+        top: 37px;
+    }
+}
+.withdrawals__content-items {
+    padding-bottom: 35px;
+}
+.withdrawals__content-item {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    color: #444;
+    &:nth-child(odd){
+        background-color: #f9f9f9;
+    }
+}
+.withdrawals__content-data {
+    width: 154px;
+    padding-left: 20px;
+    @include f500;
+}
+.withdrawals__content-email {
+    width: 180px;
+    @include f500;
+}
+.withdrawals__content-price {
+    width: 70px;
+    @include f700;
+}
+.withdrawals__content-status {
+    width: 88px;
+    @include f700;
+    &.withdrawals__content-paid{
+        color: $green;
+    }
+}
+
+// end withdrawals
 
 @import "media";
