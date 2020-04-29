@@ -6,7 +6,7 @@ html,
 body {
   height: 100%;
 }
-body{
+body {
   overflow-x: hidden;
 }
 *,
@@ -89,6 +89,8 @@ body {
 .breadcrumbs {
   &__inner {
     padding: 45px 0px 40px;
+    overflow: hidden;
+    width: 1200px;
   }
 
   &__list {
@@ -127,10 +129,13 @@ body {
 
   &::before {
     content: "\f105";
-    font-family: 'icomoon';
+    font-family: "icomoon";
     position: absolute;
     left: 0;
     color: $green;
     font-size: 14px;
   }
+}
+#modal{
+  display: none;
 }
